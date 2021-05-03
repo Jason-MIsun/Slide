@@ -26,7 +26,7 @@ jobs:
         pwd
         ./gradlew assembleRelease
         free -h
-        tree *
+        
       
     - name: Releasing using Hub
 
@@ -36,6 +36,6 @@ jobs:
 
        GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
-       APP_FOLDER: /home/runner/work/Slide/Slide/output/apk/release/*.apk
+       APP_FOLDER: /home/runner/work/Slide/Slide/app/build/generated/ap_generated_sources/noGPlayRelease/out
 
        RELEASE_TITLE: New release
