@@ -22,7 +22,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew clean app:assembleFocusDebug
+      run: ./gradlew build
       
     - name: Commit并上传新refresh_token #上传新的refresh_token到仓库
       run: |
