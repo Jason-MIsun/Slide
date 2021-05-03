@@ -22,18 +22,15 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew clean app:assembleFocusDebug
       
-    - uses: actions/checkout@master
-
-    - name: Create a Release
-
-      uses: elgohr/Github-Release-Action@master
-
-      env:
-
-        GITHUB_TOKEN: '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'
-
+    - name: Commit并上传新refresh_token #上传新的refresh_token到仓库
+      run: |
+        git config --global user.email AutoupdateRobot@email.com
+        git config --global user.name AutoupdateRobot
+        git add .
+        git commit -m "编译" -a
+    - name: 提交并push
+      uses: ad-m/github-push-action@master
       with:
-
-        args: MyReleaseMessage
+        github_token: ${{ secrets.GITHUB_TOKEN }}
