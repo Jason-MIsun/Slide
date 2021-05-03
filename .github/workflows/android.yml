@@ -26,7 +26,7 @@ jobs:
       
     - name: Releasing using Hub
 
-      uses: ShaunLWM/action-release-debugapk@master
+      uses: Jason-MIsun/action-release-apk@master
 
       env:
 
@@ -34,4 +34,4 @@ jobs:
 
        APP_FOLDER: app
 
-       RELEASE_TITLE: 构建新包
+       RELEASE_TITLE: New release
