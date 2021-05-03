@@ -30,7 +30,7 @@ jobs:
 
       env:
 
-       GITHUB_TOKEN: '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'
+       GITHUB_TOKEN: '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'
 
        APP_FOLDER: app
 
