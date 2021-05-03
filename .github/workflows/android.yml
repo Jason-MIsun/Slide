@@ -24,13 +24,14 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
       
-    - name: Commit并上传新refresh_token #上传新的refresh_token到仓库
-      run: |
-        git config --global user.email AutoupdateRobot@email.com
-        git config --global user.name AutoupdateRobot
-        git add .
-        git commit -m "编译" -a
-    - name: 提交并push
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Releasing using Hub
+
+      uses: ShaunLWM/action-release-debugapk@master
+
+      env:
+
+       GITHUB_TOKEN: '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'
+
+       APP_FOLDER: app
+
+       RELEASE_TITLE: New Build
