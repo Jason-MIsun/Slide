@@ -34,4 +34,4 @@ jobs:
 
        APP_FOLDER: app
 
-       RELEASE_TITLE: New Build
+       RELEASE_TITLE: 构建新包
