@@ -27,7 +27,6 @@ jobs:
         ./gradlew assembleRelease
         free -h
         ls -l
-        ls -l ~/app/build/*
       
     - name: Releasing using Hub
 
@@ -37,6 +36,6 @@ jobs:
 
        GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
-       APP_FOLDER: app
+       APP_FOLDER: /home/runner/work/Slide/Slide/app
 
        RELEASE_TITLE: New release
