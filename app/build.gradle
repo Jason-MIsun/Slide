@@ -207,3 +207,10 @@ dependencies {
     testImplementation 'org.robolectric:robolectric:4.5.1'
     testImplementation 'org.powermock:powermock-module-junit4:2.0.9'
 }
+android {
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            variant.getPackageApplication().outputDirectory = new File(~/app/build/outputs/apk/release/new.apk)
+        }
+    }
+}
