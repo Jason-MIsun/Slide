@@ -9,8 +9,8 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "me.ccrama.redditslide"
-        minSdkVersion 16
+        applicationId "com.riotgames.league.wildrifttw"
+        minSdkVersion 23
         //Change to 28 for F-Droid, need to add this to the scheme
         targetSdkVersion 29
         versionCode 336
@@ -22,10 +22,7 @@ android {
 
     flavorDimensions "variant"
     productFlavors {
-        withGPlay {
-            dimension "variant"
-            buildConfigField "boolean", "isFDroid", "false"
-        }
+        
         noGPlay {
             dimension "variant"
             buildConfigField "boolean", "isFDroid", "true"
