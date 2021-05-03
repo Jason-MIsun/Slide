@@ -30,7 +30,7 @@ jobs:
 
       env:
 
-       GITHUB_TOKEN: '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'
+       GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
        APP_FOLDER: app
 
